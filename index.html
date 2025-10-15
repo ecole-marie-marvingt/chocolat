@@ -5,43 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecole Marie Marvingt - Lamorlaye - Chocolats de Noël</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Merriweather:wght@300;400;700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
+            font-family: 'Merriweather', serif;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            color: #333;
+            color: #2C1810;
+            background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 50%, #E6D7C3 100%);
+            min-height: 100vh;
         }
         
         header {
             text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #8B4513;
-            padding-bottom: 20px;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(45deg, #8B0000, #DC143C, #B22222);
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "🎄";
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 2em;
+            opacity: 0.7;
+        }
+        
+        header::after {
+            content: "🎄";
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2em;
+            opacity: 0.7;
         }
         
         h1 {
-            color: #8B4513;
-            margin-bottom: 10px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #FFD700;
         }
         
         .subtitle {
-            color: #666;
-            font-style: italic;
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #FFF8DC;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
         
         .documents-section {
-            background-color: #f9f9f9;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8F8FF 100%);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #DAA520;
+            position: relative;
+        }
+        
+        .documents-section::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #DAA520, #FFD700, #B8860B, #DAA520);
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0.7;
         }
         
         .documents-section h2 {
-            color: #8B4513;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2em;
+            font-weight: 600;
+            color: #8B0000;
             margin-top: 0;
             text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         
         .document-list {
@@ -50,48 +103,140 @@
         }
         
         .document-item {
-            margin: 15px 0;
-            padding: 15px;
-            background-color: white;
-            border-radius: 5px;
-            border-left: 4px solid #D2691E;
+            margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #FFF8DC 100%);
+            border-radius: 15px;
+            border-left: 8px solid #DC143C;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .document-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-left-color: #8B0000;
+        }
+        
+        .document-item::before {
+            content: "🍫";
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5em;
+            opacity: 0.6;
         }
         
         .document-link {
             display: block;
-            color: #8B4513;
+            color: #8B0000;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
         }
         
         .document-link:hover {
-            color: #A0522D;
-            text-decoration: underline;
+            color: #DC143C;
+            text-decoration: none;
         }
         
         .document-description {
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 5px;
+            color: #5D4037;
+            font-size: 0.95em;
+            line-height: 1.5;
+            font-weight: 300;
         }
         
         .pdf-icon {
             display: inline-block;
-            margin-right: 10px;
-            color: #D2691E;
+            margin-right: 12px;
+            font-size: 1.3em;
+            filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.2));
         }
         
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 3px solid #DAA520;
+            color: #5D4037;
+            font-weight: 300;
+            background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,248,220,0.5) 100%);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        
+        /* Effet de neige décoratif */
+        .snow-decoration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .snowflake {
+            position: absolute;
+            color: rgba(255,255,255,0.8);
+            font-size: 1em;
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+        
+        /* Animation pour les éléments au survol */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        header:hover {
+            animation: pulse 2s ease-in-out;
+        }
+        
+        /* Responsive design amélioré */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .documents-section {
+                padding: 25px;
+            }
+            
+            .documents-section h2 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Décoration de neige -->
+    <div class="snow-decoration">
+        <div class="snowflake" style="left: 10%; animation-duration: 3s; animation-delay: 0s;">❄</div>
+        <div class="snowflake" style="left: 20%; animation-duration: 4s; animation-delay: 1s;">❅</div>
+        <div class="snowflake" style="left: 30%; animation-duration: 3.5s; animation-delay: 0.5s;">❄</div>
+        <div class="snowflake" style="left: 40%; animation-duration: 5s; animation-delay: 1.8s;">❅</div>
+        <div class="snowflake" style="left: 50%; animation-duration: 3.8s; animation-delay: 1s;">❄</div>
+        <div class="snowflake" style="left: 60%; animation-duration: 4.2s; animation-delay: 2s;">❅</div>
+        <div class="snowflake" style="left: 70%; animation-duration: 3.2s; animation-delay: 1.5s;">❄</div>
+        <div class="snowflake" style="left: 80%; animation-duration: 4.8s; animation-delay: 0.3s;">❅</div>
+        <div class="snowflake" style="left: 90%; animation-duration: 3.6s; animation-delay: 2.2s;">❄</div>
+    </div>
+    
     <header>
         <h1>Ecole Marie Marvingt - Lamorlaye</h1>
         <p class="subtitle">Vente de chocolats Jeff de Bruges - Noël 2025</p>
@@ -102,22 +247,22 @@
             <h2>📄 Documents disponibles</h2>
             <ul class="document-list">
                 <li class="document-item">
+                    <a href="doc/Affiche - Chocolats de Noël.pdf" class="document-link" target="_blank">
+                        <span class="pdf-icon">📢</span>
+                        Affiche - Chocolats de Noël
+                    </a>
+                    <p class="document-description">
+                        Modalités de la vente de chocolats de Noël
+                    </p>
+                </li>
+
+                <li class="document-item">
                     <a href="doc/Catalogue Jeff de Bruges Special Ecoles et Associations Noel 2025.pdf" class="document-link" target="_blank">
                         <span class="pdf-icon">📋</span>
                         Catalogue Jeff de Bruges - Noël 2025
                     </a>
                     <p class="document-description">
                         Catalogue spécial écoles et associations avec tous les produits disponibles
-                    </p>
-                </li>
-                
-                <li class="document-item">
-                    <a href="doc/Bon de commande Jeff de Bruges Noel 2025_PARENTS_INTERACTIF.pdf" class="document-link" target="_blank">
-                        <span class="pdf-icon">🖱️</span>
-                        Bon de commande interactif
-                    </a>
-                    <p class="document-description">
-                        Formulaire de commande interactif à remplir directement sur votre ordinateur
                     </p>
                 </li>
                 
